@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color: #1c2634; background: #f6f8fb; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; font-family: Arial, "Microsoft YaHei", sans-serif; }
+button, input, select { font: inherit; }
+input, select { outline: none; }
+input:focus, select:focus { border-color: #10b981; box-shadow: 0 0 0 3px rgb(16 185 129 / .12); }
+@layer components {
+  .card { @apply rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200/70; }
+  .field { @apply h-11 w-full rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-800 placeholder:text-slate-400; }
+  .btn-primary { @apply rounded-xl bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-600; }
+  .btn-secondary { @apply rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50; }
+}
